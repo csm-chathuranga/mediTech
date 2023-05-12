@@ -41,8 +41,6 @@ const SUPPORTED_FORMATS = ['image/jpg', 'image/jpeg', 'image/png', 'image/PNG'];
 export const imgCheck = yup.object().shape({
 profile_image: yup.mixed()
               .required("You need to provide a file")
-              .test('format',
-              'Please select valid image type', (value) => !value || (value && SUPPORTED_FORMATS.includes(value.type))),
 });
 
 export const schemaLogin = yup.object().shape({

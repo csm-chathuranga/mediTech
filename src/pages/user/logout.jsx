@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import {  useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom';
 import { flushAuth } from '../../reducers/AuthReducer.ts';
 import { Link  } from 'react-router-dom'
 import { flushUser} from '../../reducers/UserReducer.ts';

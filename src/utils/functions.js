@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import { useNavigate  } from 'react-router-dom';
 import { API } from '../utils/variables';
 
 export const httpGet=(url,callback)=>{

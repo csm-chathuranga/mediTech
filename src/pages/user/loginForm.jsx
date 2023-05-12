@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import {  useDispatch } from 'react-redux'
 import _ from 'lodash';
 import { useForm } from 'react-hook-form';
-import { useNavigate,redirect  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom';
 import { yupResolver }  from '@hookform/resolvers/yup';
-import * as yup from 'yup';
 import axios from 'axios';
 import { setAuth } from '../../reducers/AuthReducer.ts';
 import { API } from '../../utils/variables';
@@ -37,7 +36,6 @@ let LoginForm = ({setSuccess}) => {
                     setSuccess(true);
                     dispatch(setAuth(response.data.access_token))
                     localStorage.setItem('token',JSON.stringify(response.data.access_token))
-                    // navigate('/user/show')
         }).catch(res=>{
             setLoad(false)
             setIsError(true)

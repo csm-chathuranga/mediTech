@@ -1,12 +1,7 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import storage from 'redux-persist/lib/storage'
 import userReducer  from './reducers/UserReducer.ts'
-// import roleReducer  from './reducers/RoleReducer.ts'
-// import featureReducer from './reducers/FeatureReducer.ts'
-// import subFeatureRducer from './reducers/SubFeatureReducer.ts'
-// import SubRoleReducer from './reducers/SubRoleReducer.ts'
 import AuthReducer from './reducers/AuthReducer.ts'
-// import selectedFeatureReducer from './reducers/SelectedFeatureReducer.ts'
 
 import { 
   persistReducer,
@@ -27,12 +22,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   user: userReducer,
-  // role: roleReducer,
-  // feature: featureReducer,
-  // subFeature: subFeatureRducer,
-  // subRole: SubRoleReducer,
   auth: AuthReducer,
-  // selectedFeature: selectedFeatureReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
