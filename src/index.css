@@ -1,0 +1,11 @@
+body {
+  background-color: #205387 !important;
+  margin: 0;
+}
+.btn-primary{
+  background-color: #205387 !important;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
